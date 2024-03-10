@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 목록</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/boardDetails.js"></script>
+    <script src="/js/comment.js"></script>
+</head>
+<body>
+<div class="container mt-5">
+    <h2 th:text="${board.title}">게시글 제목</h2>
+    <p th:text="${board.content}">게시글 내용</p>
+</div>
+
+<a href="/api/dashboard" class="btn btn-primary">게시판 목록으로 돌아가기</a>
+<!-- data-id 속성을 통해 게시글 ID 전달 -->
+<button id="editBtn" class="btn btn-warning" th:data-id="${board.id}">수정하기</button>
+<button id="deleteBtn" class="btn btn-danger" th:data-id="${board.id}">삭제하기</button>
+<div class="container mt-5">
+    <div id="commentsSection">
+        <h3>댓글</h3>
+        <ul id="commentsList" class="list-unstyled">
+        </ul>
+        <form id="commentForm">
+            <div class="form-group">
+                <label for="commentContent">댓글 내용</label>
+                <textarea class="form-control" id="commentContent" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">댓글 작성</button>
+        </form>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

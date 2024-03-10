@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <!-- 부트스트랩 CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center">로그인</h3>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">이메일:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">비밀번호:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">로그인</button>
+                        <!-- 로그인 페이지 내에 회원가입 버튼 추가 -->
+                        <button type="button" class="btn btn-link btn-block" onclick="window.location='/api/auth/register';">회원가입</button>
+                        <!--                        <button type="button" class="btn btn-link btn-block" onclick="window.location='/register.html';">회원가입</button>-->
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 옵셔널 자바스크립트 -->
+<!-- jQuery, Popper.js, 그리고 Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!--<script src="/js/login.js"></script>-->
+
+</body>
+
+</body>
+</html>
